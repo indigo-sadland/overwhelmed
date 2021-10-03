@@ -5,7 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
-	"overwhelmed/cmd"
+	"github.com/indigo-sadland/overwhelmed/cmd"
 
 )
 
