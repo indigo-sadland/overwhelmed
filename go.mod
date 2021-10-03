@@ -1,4 +1,4 @@
-module overwhelmed
+module github.com/indigo-sadland/overwhelmed
 
 go 1.16
 
