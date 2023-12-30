@@ -1,6 +1,6 @@
 # overwhelmed
 
-Parser of whois information. Supports 2 type of output: cmd and .docx (Requires API key). 
+Whois information parser. Supports 2 type of output: cmd and .docx (Requires API key). 
 
 ### API:
 To Get a Metered License API Key in the Free Tier, sign up on https://cloud.unidoc.io
