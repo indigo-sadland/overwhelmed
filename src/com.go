@@ -15,7 +15,7 @@ var(
 	udCom  = []string{"Updated Date:"}
 	edCom  = []string{"Registrar Registration Expiration Date:"}
 	rrCom  = []string{"Registrar:" }
-	rtCom  = []string{"Registrant Name:", "Registrant Organization:"}
+	rtCom  = []string{"Registrant Name:"}
 	rtcCom = []string{"Registrant Country:" }
 
 )
@@ -101,7 +101,7 @@ func ComTemplate(html []byte, target string) *Whois {
 				value = strings.TrimPrefix(value, " ")
 				wi.Registrar = value
 			}
-			if strings.Contains(str, rtCom[0]) || strings.Contains(str, rtCom[1])  {
+			if strings.Contains(str, rtCom[0]) {
 
 				value := ComTrimmer(str, rtCom)
 
@@ -126,7 +126,7 @@ func ComTemplate(html []byte, target string) *Whois {
 			// If there is no strings in current whois information like "Registrant Name:"
 			// then we need to check whois history information.
 			if !wasThereAlready {
-				if !strings.Contains(string(html), rtCom[0]) || !strings.Contains(string(html), rtCom[1]) {
+				if !strings.Contains(string(html), rtCom[0]) {
 					value, err := GetWhoisHistoryFree(target, 4)
 					if err != nil {
 						fmt.Println(err)
